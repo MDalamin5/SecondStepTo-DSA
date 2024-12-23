@@ -1,0 +1,19 @@
+# C++ Compiler
+g++ (MinGW for Windows or GCC for Linux/Mac)
+
+# Code Editor
+Visual Studio Code
+
+# Recommended VS Code Extensions
+ms-vscode.cpptools            # C/C++ extension for VS Code
+ms-vscode.cmake-tools         # CMake support
+xaver.clang-format            # Code formatting
+streetsidesoftware.code-spell-checker  # Spell checker for comments and documentation
+
+# Debugging
+Debugger for C++ (built into VS Code with ms-vscode.cpptools)
+
+# Optional Tools
+clang                        # Static analysis and formatting
+cmake                        # Build system generator
+make                         # Build automation tool
