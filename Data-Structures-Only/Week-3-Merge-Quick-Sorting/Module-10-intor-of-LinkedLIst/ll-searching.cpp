@@ -32,6 +32,24 @@ class LinkedList{
 
     }
 
+    int Searching(int value){
+        Node* temp = head;
+        if(head == NULL){
+            cout<<"Linked list is empty"<<endl;
+            return -1;
+        }
+        int value_idx = 0;
+        while (temp != NULL)
+        {
+            if(value == temp->data){
+                return value_idx;
+            }
+            temp = temp->next;
+            value_idx++;
+        }
+        return -1;
+    }
+
     void Display(){
         if(head==NULL){
             cout<<"Linked list is empty"<<endl;
@@ -56,5 +74,6 @@ int main(){
     for(int i=1; i<=5; i++)
         ll.InsertAtHead(10*i);
 
-    ll.Display();
+    // ll.Display();
+    cout<<ll.Searching(30)<<endl;
 }
