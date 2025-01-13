@@ -6,6 +6,7 @@ vector<int> quickSort(vector<int>&a){
         return a;
     
     int pivot = a[a.size() - 1];
+    // int pivot = rand() % (a.size()); // choose pivot as randomly
     vector<int> b, c;
     
     // 
