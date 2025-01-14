@@ -46,6 +46,31 @@ public:
 
     }
 
+    void eraseFromAnyPosition(int position){
+        if(position < 0 || position >= sizeOfLinkedList){
+            cout<<"IndexOutOfBound error"<<endl;
+            return;
+        }
+        if(position==0){
+            eraseFromHead();
+            return;
+        }
+
+        node* currentNode = head;
+        int counter = 0;
+        while(counter < position-1){
+            currentNode = currentNode->next;
+            counter++;
+        }
+        // got the node which is placed before our deleting node
+        node* deleteNode = currentNode->next;
+        currentNode->next = deleteNode->next;
+        delete deleteNode;
+        sizeOfLinkedList--;
+        cout<<"delete done"<<endl;
+        
+    }
+
     int getLinkedListSize(){
         return sizeOfLinkedList;
     }
@@ -76,7 +101,7 @@ int main(){
     
     cout<<"Before Deleting"<<endl;
     ll.Display();
-    ll.eraseFromHead();
+    ll.eraseFromAnyPosition(4);
     cout<<"After deleting the head node"<<endl;
     ll.Display();
 }
