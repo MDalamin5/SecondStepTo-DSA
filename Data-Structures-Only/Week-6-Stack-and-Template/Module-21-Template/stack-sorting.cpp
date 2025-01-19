@@ -120,7 +120,9 @@ int main(){
         temp.push(st.top());
         st.pop();
     }
-    temp.ll.Display();
+    // temp.ll.Display();
+    swap(temp, st);
+    st.ll.Display();
     cout<<"Done";
 
 }
