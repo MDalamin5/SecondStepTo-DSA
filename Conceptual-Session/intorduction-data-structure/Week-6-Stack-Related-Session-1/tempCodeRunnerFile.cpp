@@ -1,0 +1,2 @@
+int input;
+    // cin>>input;
