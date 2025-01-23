@@ -1,1 +1,2 @@
 1. https://codeforces.com/problemset/problem/1790/A
+2. https://codeforces.com/problemset/problem/1787/A
