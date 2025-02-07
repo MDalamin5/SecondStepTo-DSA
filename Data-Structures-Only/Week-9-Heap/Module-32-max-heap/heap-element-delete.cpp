@@ -28,23 +28,34 @@ public:
     }
 
     void DeleteElement(int idx){
+        if(idx > node.size())
+            return;
+            
         swap(node[idx], node[node.size() - 1]);
         node.pop_back();
         downHeapiFi(idx);
     }
 
     void downHeapiFi(int idx){
-        while(idx < node.size()){
-            if(node[(2*idx) + 1] > node[idx]){
-                swap(node[idx], node[(2*idx) + 1]);
-                idx = (2*idx) + 1;
+        
+            while(1){
+                int largest = idx;
+                int l = (2*idx) + 1;
+                int r = (2*idx) + 2;
+
+                if(l < node.size() && node[l] > node[largest]){
+                    largest = l;
+                }
+                if(r < node.size() && node[r] > node[largest]){
+                    largest = r;
+                }
+                if(largest == idx){
+                    break;
+                }
+                swap(node[idx], node[largest]);
+                idx = largest;
             }
-            else{
-                swap(node[idx], node[(2*idx) + 2]);
-                idx = (2*idx) + 2;
-            }
-            cout<<"i'm hare"<<endl;
-        }
+        
         
     }
 };
