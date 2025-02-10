@@ -6,6 +6,8 @@
         "string": "cpp",
         "xstring": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "xtree": "cpp",
+        "vector": "cpp"
     }
 }
