@@ -30,8 +30,8 @@ if and only if (i->j) using only one edge
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int nodes = 4;
-    int matrix[nodes][nodes] = {}; // empty '{}' for zero matrix.
+    int nodes = 4; // O(1)
+    int matrix[nodes][nodes] = {}; // 0(n^2)  empty '{}' for zero matrix.
 
     // set all index value is zero
     // for(int i=0; i<nodes; i++){
@@ -40,7 +40,7 @@ int main(){
     //     }
     // }
 
-    // inserting the graph value into the matrix
+    // inserting the graph value into the matrix O(n^2)
     matrix[0][1] = 1;
     matrix[1][0] = 1;
     matrix[1][2] = 1;
