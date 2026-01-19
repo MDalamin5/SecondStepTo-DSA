@@ -12,3 +12,7 @@ BFS(graph, source):
         - for all adj node of 'head':
             - if visited-array[adj] == 0:
                 - visited-array[adj] = 1 && queue.push(adj)
+
+
+space complexity - O(v)
+time complexity -  O(v+e)  --> complete graph O(v^2) --> O(n^2)
