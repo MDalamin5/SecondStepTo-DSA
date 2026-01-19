@@ -1,0 +1,14 @@
+Input connected Graph and the Graph source.
+output all traversal node.
+
+BFS(graph, source):
+    - initiate an array called 'visited-array' and empty queue
+    - visited-array[source] = 1 && queue.push(source)
+
+    - loop run until the queue is not empty
+        - front = queue.head()
+        - queue.pop()
+        - print(front)
+        - for all adj node of 'head':
+            - if visited-array[adj] == 0:
+                - visited-array[adj] = 1 && queue.push(adj)
