@@ -1,3 +1,5 @@
-4 types of algo 
-1. mod
-2.....
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    cout<<"Vanilla Hash Algo..."<<endl;
+}
