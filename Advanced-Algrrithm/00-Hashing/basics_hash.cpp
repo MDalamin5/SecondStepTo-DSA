@@ -29,10 +29,10 @@ public:
         int idx = hashvalue(key);
         if(search(key) != hashtable[idx].end()){
             hashtable[idx].erase(search(key));
-            cout<<key<<"is deleted"<<endl;
+            cout<<key<<" is deleted"<<endl;
         }
         else{
-            cout<<"The key is not found in the hash table"<<endl;
+            cout<<"The key:"<<key<< " is not found in the hash table"<<endl;
         }
         
         
@@ -41,7 +41,11 @@ public:
 
 int main(){
     Hashing h(10);
-    
+
     h.addKey(5);
     h.addKey(9);
+    h.addKey(3);
+
+    h.deleteKey(9);
+    h.deleteKey(9);
 }
