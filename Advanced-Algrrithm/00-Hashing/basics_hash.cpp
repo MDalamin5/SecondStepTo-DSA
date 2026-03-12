@@ -5,6 +5,7 @@ class Hashing {
     vector<list<int>> hashtable;
     int buckets;
 
+public:
     Hashing(int size){
         buckets = size;
         hashtable.resize(size);
@@ -14,7 +15,7 @@ class Hashing {
         return key%buckets;
     }
 
-    void add(int key){
+    void addKey(int key){
         int idx = hashvalue(key);
         hashtable[idx].push_back(key);
     }
@@ -28,6 +29,10 @@ class Hashing {
         int idx = hashvalue(key);
         if(search(key) != hashtable[idx].end()){
             hashtable[idx].erase(search(key));
+            cout<<key<<"is deleted"<<endl;
+        }
+        else{
+            cout<<"The key is not found in the hash table"<<endl;
         }
         
         
@@ -35,5 +40,8 @@ class Hashing {
 };
 
 int main(){
-    cout<<"why hashing..."<<endl;
+    Hashing h(10);
+    
+    h.addKey(5);
+    h.addKey(9);
 }
